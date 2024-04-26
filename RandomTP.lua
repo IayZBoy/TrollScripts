@@ -1,7 +1,7 @@
 --hi
 local players = game:GetService("Players")
 local players2 = players:GetChildren()
-local plr = plr.LocalPlayer
+local plr = players.LocalPlayer
 local NEVERLOSE = loadstring(game:HttpGet("https://raw.githubusercontent.com/3345-c-a-t-s-u-s/NEVERLOSE-UI-Nightly/main/source.lua"))()
 local Active = false
 
