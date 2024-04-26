@@ -1,4 +1,9 @@
---hi
+-----------------------------------------------------------------------------
+
+-- TROLL SCRIPTS BY IAYZBOY
+-- THIS CODE IS OPEN SOURCE AND THUS FREE TO USE.
+
+-----------------------------------------------------------------------------
 local players = game:GetService("Players")
 local players2 = players:GetChildren()
 local plr = players.LocalPlayer
