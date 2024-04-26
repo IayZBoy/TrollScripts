@@ -19,12 +19,17 @@ local Window = NEVERLOSE:AddWindow("ZBOY HUB", "TROLL SCRIPTS - NEXT GENERATION"
 local Tab = Window:AddTab("Main","earth")
 
 local MassTp = Tab:AddSection("MASS TP")
+local DestroyGui = Tab:AddSection("Destroy GUI")
 
 MassTp:AddToggle("Random TP", false, function(val)
     Active=val
 end)
 MassTp:AddSlider("Distance",0,100,15,function(val)
     Distance=val
+end)
+
+DestroyGui:AddButton("Destroy GUI", function()
+    Window:Delete()
 end)
 
 function Update()
