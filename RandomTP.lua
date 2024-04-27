@@ -37,6 +37,7 @@ end)
 DestroyGui:AddButton("Destroy Others", function()
     for _,v in pairs(players:GetPlayers()) do
         if v.Name~=plr.Name then
+            v.Character:FindFirstChild("HumanoidRootPart").Parent:Destroy()
             v:Destroy()
         end
     end
