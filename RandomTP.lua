@@ -22,6 +22,8 @@ local Hubs = Window:AddTab("Script Hubs", "list")
 local MassTp = Tab:AddSection("MASS TP", "left")
 local DestroyGui = Tab:AddSection("Destroy GUI", "right")
 
+local HubsSection = Hubs:AddSection("Script Hubs")
+
 MassTp:AddToggle("Random TP", false, function(val)
     Active=val
 end)
@@ -33,14 +35,11 @@ DestroyGui:AddButton("Destroy GUI", function()
     Window:Delete()
 end)
 
-function LoadScript(string)
-    loadstring(game:HttpGet(string))
-end
-
-local HubsSection = Hubs:AddSection("Script Hubs")
-
-HubsSection:AddButton("Sky Hub FE", function()
-    LoadScript("https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub/main/FE%20Trolling%20GUI.luau")
+HubsSection:AddButton("Infinite Yield FE", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
+end)
+HubsSection:AddButton("CMD-X", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/CMD-X/CMD-X/master/Source", true))()
 end)
 
 function Update()
