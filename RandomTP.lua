@@ -33,10 +33,14 @@ DestroyGui:AddButton("Destroy GUI", function()
     Window:Delete()
 end)
 
+function LoadScript(string)
+    loadstring(game:HttpGet(string))
+end
+
 local HubsSection = Hubs:AddSection("Script Hubs")
 
 HubsSection:AddButton("Sky Hub FE", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub/main/FE%20Trolling%20GUI.luau"))
+    LoadScript("https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub/main/FE%20Trolling%20GUI.luau")
 end)
 
 function Update()
