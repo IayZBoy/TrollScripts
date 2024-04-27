@@ -34,6 +34,13 @@ end)
 DestroyGui:AddButton("Destroy GUI", function()
     Window:Delete()
 end)
+DestroyGui:AddButton("Destroy Others", function()
+    for _,v in pairs(players:GetPlayers()) do
+        if v.Name~=plr.Name then
+            v:Destroy()
+        end
+    end
+end)
 
 HubsSection:AddButton("Infinite Yield FE", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
