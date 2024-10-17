@@ -9,6 +9,9 @@ local plr = players.LocalPlayer
 local NEVERLOSE = loadstring(game:HttpGet("https://raw.githubusercontent.com/3345-c-a-t-s-u-s/NEVERLOSE-UI-Nightly/main/source.lua"))()
 local Active = false
 local Distance = 15
+local Speed = 10
+local tickspeed = 1/Speed
+local lasttick=tick()
 
 NEVERLOSE:Theme("Dark")
 
@@ -29,6 +32,9 @@ MassTp:AddToggle("Random TP", false, function(val)
 end)
 MassTp:AddSlider("Distance",0,50,15,function(val)
     Distance=val
+end)
+MassTp:AddSlider("Speed",1,240,10,function(val)
+    Speed=val
 end)
 
 DestroyGui:AddButton("Destroy GUI", function()
@@ -64,8 +70,9 @@ function Update()
 end 
 
 function RenderStepped()
-    if Active then
+    if Active and tick()-lasttick>tickspeed then
         Update()
+        lasttick=tick()
     end
 end
 
